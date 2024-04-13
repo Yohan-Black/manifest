@@ -1,14 +1,9 @@
-# PixelOS
-
- Getting Started
----------------
-To get started with the PixelOS sources, you'll need to get
-familiar with [Git and Repo](https://source.android.com/setup/build/downloading).
+# PixelOS Fork (ye)
 
  To initialize your local repository, use command:
 
 ```bash
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
+repo init -u https://github.com/Yohan-Black/manifest.git -b fourteen --git-lfs
 ```
 
 Then sync up:
@@ -28,11 +23,11 @@ Building the System
 Lunch your device after cloning all device sources if needed.
 
 ```bash
-lunch aosp_devicecodename-buildtype
+lunch aosp_devicecodename-ap1a-userdebug
 ```
 
 Start compilation
 
 ```bash
-make bacon
+make bacon  -j$(nproc --all)
 ```
